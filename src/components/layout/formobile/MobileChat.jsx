@@ -53,7 +53,7 @@ export function MobileChat() {
   return (
     <>
       <div className="w-full h-full flex flex-col bg-[#0d1418] rounded-lg">
-        <div className="pb-3 bg-[#202c33]  text-white flex items-center gap-4 pl-2">
+        <div className="pb-3 bg-[#121a1f]  text-white flex items-center gap-4 pl-2">
           <button className="h-13 w-6" onClick={() => setPersonClick(false)}>
             <FaArrowLeft className="text-white text-xl" />
           </button>
@@ -138,7 +138,7 @@ export function MobileChat() {
             <div
               key={index}
               className={`mb-2 p-2 py-2  rounded-lg shadow w-max max-w-xs ${
-                msg.sender === "user" ? "bg-[#005c4b] ml-auto" : "bg-[#202c33]"
+                msg.sender === "user" ? "bg-[#005c4b] ml-auto" : "bg-[#121a1f]"
               }`}
             >
               {msg.text}
@@ -147,7 +147,7 @@ export function MobileChat() {
           ))}
         </div>
 
-        <div className="pt-3 bg-[#202c33] flex items-center gap-2 border-t border-gray-700">
+        <div className="pt-3 bg-[#121a1f] flex items-center gap-2 border-t border-gray-700">
           <button className="p-2 text-gray-400">
             <FaSmile className="size-6" />
           </button>
