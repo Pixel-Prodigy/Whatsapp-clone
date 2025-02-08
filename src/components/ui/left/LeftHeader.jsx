@@ -1,13 +1,14 @@
 import React from "react";
 import { HeaderBottom } from "./LeftHeaderBottom";
-
+import { useState } from "react";
 export function LeftHeader() {
+  const [openBox, setOpenBox] = useState(false);
   return (
-    <div >
+    <div>
       <div className="flex justify-between px-2 items-start py-2 h-16 pr-3 border-r-2 border-[#2a353e]">
-        <h1 className="text-white text-2xl font-bold">Chats</h1>
-        <div className="flex gap-8">
-          <span>
+        <h1 className="text-white text-2xl mt-[4px] font-bold">Chats</h1>
+        <div className="flex gap-4">
+          <span className="p-2">
             <svg
               viewBox="0 0 24 24"
               height="24"
@@ -29,8 +30,15 @@ export function LeftHeader() {
               ></path>
             </svg>
           </span>
-          <span>
+          <span
+            className={`relative transition-all flex items-center justify-center p-2 ${
+              openBox ? "bg-[#293238] rounded-full   absolute" : ""
+            }`}
+          >
             <svg
+              onClick={() => setOpenBox(true)}
+              onBlur={() => setOpenBox(false)}
+              tabIndex={0}
               viewBox="0 0 24 24"
               height="24"
               width="24"
@@ -46,6 +54,23 @@ export function LeftHeader() {
                 d="M12,7c1.104,0,2-0.896,2-2c0-1.105-0.895-2-2-2c-1.104,0-2,0.894-2,2 C10,6.105,10.895,7,12,7z M12,9c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,9.895,13.104,9,12,9z M12,15 c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,15.894,13.104,15,12,15z"
               ></path>
             </svg>
+
+            {openBox && (
+              <div className="bg-[#233138] z-100 grid grid-rows-4  py-3 h-50 w-50 rounded-md absolute top-12 right-0">
+                <div className=" flex items-center text-white/70 px-4  hover:bg-[#1b252f]">
+                  New group
+                </div>
+                <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
+                  Starred messages
+                </div>
+                <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
+                  Select chats
+                </div>
+                <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
+                  Log out
+                </div>
+              </div>
+            )}
           </span>
         </div>
       </div>

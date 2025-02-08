@@ -11,15 +11,15 @@ export function Header() {
   const [hoverBoxText, setHoverBoxText] = useState("");
 
   return (
-    <div className="h-full items-center bg-[#202c33] py-5 w-fit px-5 flex flex-col justify-between border-r-3 border-[#2a353e]">
-      <div className=" grow flex flex-col gap-7 relative">
+    <div className="h-full items-center bg-[#202c33] py-4 w-fit px-4 flex flex-col justify-between border-r-3 border-[#2a353e]">
+      <div className=" grow flex flex-col gap-5 relative">
         <HoverBox style={hoverBox} text={hoverBoxText} />
 
         <span>
           <svg
             viewBox="0 0 24 24"
-            height="28"
-            width="28"
+            height="25"
+            width="25"
             preserveAspectRatio="xMidYMid meet"
             className="text-white/60 cursor-pointer relative"
             fill="none"
@@ -60,8 +60,8 @@ export function Header() {
         <span>
           <svg
             viewBox="0 0 24 24"
-            height="28"
-            width="28"
+            height="25"
+            width="25"
             preserveAspectRatio="xMidYMid meet"
             className="text-white/60 cursor-pointer relative"
             fill="none"
@@ -110,8 +110,8 @@ export function Header() {
         <span>
           <svg
             viewBox="0 0 24 24"
-            height="28"
-            width="28"
+            height="25"
+            width="25"
             preserveAspectRatio="xMidYMid meet"
             className="text-white/60 cursor-pointer relative"
             fill="none"
@@ -158,8 +158,8 @@ export function Header() {
         <span>
           <svg
             viewBox="0 0 24 24"
-            height="28"
-            width="28"
+            height="25"
+            width="25"
             preserveAspectRatio="xMidYMid meet"
             className="text-white/60 cursor-pointer relative"
             fill="none"
@@ -248,8 +248,8 @@ export function Header() {
         <span>
           <svg
             viewBox="0 0 24 24"
-            height="28"
-            width="28"
+            height="25"
+            width="25"
             preserveAspectRatio="xMidYMid meet"
             className="text-white/60 cursor-pointer relative"
             fill="none"

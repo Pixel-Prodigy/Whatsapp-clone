@@ -8,7 +8,7 @@ export function Left() {
   return (
     <div className="h-full bg-[#172128] pl-4 flex flex-col">
       <LeftHeader />
-      <div className=" flex flex-col overflow-scroll max-h-[89vh]">
+      <div className=" flex flex-col overflow-scroll max-h-[83vh]">
         {Array.from({ length: chatCount }).map((_, index) => (
           <Persons key={index} />
         ))}
