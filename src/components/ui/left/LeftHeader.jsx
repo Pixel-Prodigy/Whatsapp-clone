@@ -1,12 +1,12 @@
 import React from "react";
 import { HeaderBottom } from "./LeftHeaderBottom";
 import { useState } from "react";
-export function LeftHeader() {
+export function LeftHeader({name}) {
   const [openBox, setOpenBox] = useState(false);
   return (
-    <div>
+    <div className="max-h-[20vh]">
       <div className="flex justify-between px-2 items-start py-2 h-16 pr-3 border-r-2 border-[#2a353e]">
-        <h1 className="text-white text-2xl mt-[4px] font-bold">Chats</h1>
+        <h1 className="text-white text-2xl mt-[4px] font-bold">{name}</h1>
         <div className="flex gap-4">
           <span className="p-2">
             <svg

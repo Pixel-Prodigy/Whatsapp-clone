@@ -12,7 +12,7 @@ export function Header() {
 
   return (
     <div className="h-full items-center bg-[#202c33] py-4 w-fit px-4 flex flex-col justify-between border-r-3 border-[#2a353e]">
-      <div className=" grow flex flex-col gap-5 relative">
+      <div className="flex flex-col gap-5 relative">
         <HoverBox style={hoverBox} text={hoverBoxText} />
 
         <span>
