@@ -69,7 +69,7 @@ export function MobileChat() {
   return (
     <>
       <div className="w-full h-full flex flex-col bg-[121a1f] rounded-lg">
-        <div className="pb-3 bg-[#121a1f]  text-white flex border-t-[1px] border-white/15 items-center gap-4 pl-2">
+        <div className="pb-3 bg-[#121a1f]  text-white flex border-b-[1px] border-white/15 items-center gap-4 pl-2">
           <button className="h-13 w-6" onClick={() => setPersonClick(false)}>
             <FaArrowLeft className="text-white text-xl" />
           </button>
