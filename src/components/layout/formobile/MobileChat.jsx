@@ -62,7 +62,7 @@ export function MobileChat() {
       setTimeout(() => {
         setMessages([...newMessages, { text: randomReply, sender: "bot" }]);
         setIsTyping(false);
-      }, 3000);
+      }, 2500);
     }, 1000);
   };
 
