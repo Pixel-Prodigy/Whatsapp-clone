@@ -52,7 +52,7 @@ export function MobileChat() {
 
   return (
     <>
-      <div className="w-full h-full flex flex-col bg-[#0d1418] rounded-lg">
+      <div className="w-full h-full flex flex-col bg-[#080c0f] rounded-lg">
         <div className="pb-3 bg-[#121a1f]  text-white flex items-center gap-4 pl-2">
           <button className="h-13 w-6" onClick={() => setPersonClick(false)}>
             <FaArrowLeft className="text-white text-xl" />
@@ -133,7 +133,7 @@ export function MobileChat() {
             </span>
           </span>
         </div>
-        <div className="flex-1 p-4 overflow-y-auto bg-[#0d1418] text-white">
+        <div className="flex-1 p-4 overflow-y-auto bg-[#080c0f] text-white">
           {messages.map((msg, index) => (
             <div
               key={index}

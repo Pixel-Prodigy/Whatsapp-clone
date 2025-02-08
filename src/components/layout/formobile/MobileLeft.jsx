@@ -7,7 +7,7 @@ export function MobileLeft() {
   const chatCount = 80; 
 
   return (
-    <div className="h-full bg-[#121a1f] pl-4 flex flex-col">
+    <div className="h-full bg-[#080c0f] pl-4 flex flex-col">
       <LeftHeader name={'Whatsapp'} />
       <div className=" flex flex-col overflow-scroll max-h-[83vh]  ">
         {Array.from({ length: chatCount }).map((_, index) => (
