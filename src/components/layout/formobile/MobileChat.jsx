@@ -16,18 +16,34 @@ export function MobileChat() {
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [openBox, setOpenBox] = useState(false);
-
   const randomResponses = [
-    "What did you said ? I can't understand you",
-    "Hmmm",
-    "idk",
-    "Don't talk to me nerd",
-    "I'm too sleepy to read your message",
-    "Trust me idc what you say",
-    "Creepy ass guy tryna hit on me",
-    "Wow what nerve",
+    "What did you say? I can't understand you.",
+    "Hmmm.",
+    "idk.",
+    "Don't talk to me, nerd.",
+    "I'm too sleepy to read your message.",
+    "Trust me, idc what you say.",
+    "Creepy ass guy tryna hit on me.",
+    "Wow, what nerve.",
     "Can you just stfu?",
     "Do you hear the pixels talking?",
+    "Bro, I lost brain cells reading that.",
+    "Your opinion? Straight to the trash.",
+    "You typing but ain't nobody reading.",
+    "My interest in this conversation is hitting negative levels.",
+    "Even Google doesn't wanna answer that.",
+    "Try again, but this time with brain cells.",
+    "L take.",
+    "Respectfully, shut up.",
+    "You just unlocked a new level of nonsense.",
+    "Damn, even my WiFi is tryna disconnect from this convo.",
+    "That’s crazy bro, but who asked?",
+    "You got jokes, but no one’s laughing.",
+    "Man, I’d rather talk to my wall.",
+    "Your keyboard deserves better.",
+    "Your message gave me a headache.",
+    "I wish I could unread that.",
+    "Bro's talking but I’m already asleep.",
   ];
 
   const sendMessage = () => {
