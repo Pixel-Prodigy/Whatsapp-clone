@@ -4,8 +4,8 @@ export function HeaderBottom() {
   const {setSearchClick, searchClick} = useContext(Context)
   const [focus , setFocus] = useState(false)
   return (
-    <div className="flex flex-col gap-3 mb-2 pr-3">
-      <div className="w-full py-2 items-center bg-[#202c33] rounded-lg flex gap-6 px-4">
+    <div className="flex flex-col gap-2 mb-2 pr-3">
+      <div className="w-full py-2 items-center bg-[#202c33] justify-start max-h-[35px] rounded-lg flex gap-6 px-4">
         <span>
           <svg
             viewBox="0 0 24 24"
@@ -25,19 +25,19 @@ export function HeaderBottom() {
             ></path>
           </svg>
         </span>
-        <input className="text-white/80 outline-none" placeholder="Search" onFocus={() => setFocus(true) } onBlur={()=>setFocus(false)}/>
+        <input className=" text-white/80 outline-none" placeholder="Search" onFocus={() => setFocus(true) } onBlur={()=>setFocus(false)}/>
       </div>
-      <div className="flex gap-2">
-        <div className="bg-[#202c33] text-white/50 rounded-full px-4 flex place-content-center py-1">
+      <div className="flex justify-start gap-2">
+        <div className="bg-[#202c33] text-white/50 max-h-[32px] rounded-full px-[14px] flex place-content-center py-1">
           All
         </div>
-        <div className="bg-[#202c33] text-white/50 rounded-full px-4 flex place-content-center py-1">
+        <div className="bg-[#202c33] text-white/50 rounded-full px-[14px] flex place-content-center py-1">
           Unread
         </div>
-        <div className="bg-[#202c33] text-white/50 rounded-full px-4 flex place-content-center py-1">
+        <div className="bg-[#202c33] text-white/50 rounded-full px-[14px] flex place-content-center py-1">
           Favorites
         </div>
-        <div className="bg-[#202c33] text-white/50 rounded-full px-4 flex place-content-center py-1">
+        <div className="bg-[#202c33] text-white/50 rounded-full px-[14px] flex place-content-center py-1">
           Groups
         </div>
       </div>
