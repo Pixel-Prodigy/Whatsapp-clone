@@ -8,13 +8,13 @@ import {
   FaSearch,
   FaFileImage,
 } from "react-icons/fa";
+import { RightHeader } from "./RightHeader";
 
 export function Chat() {
   const { personClick, names } = useContext(Context);
   const [messages, setMessages] = useState([{ text: "Hello", sender: "user" }]);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const [openBox, setOpenBox] = useState(false);
 
   const randomResponses = [
     "What did you said ? I can't understand you",
@@ -45,93 +45,16 @@ export function Chat() {
       setTimeout(() => {
         setMessages([...newMessages, { text: randomReply, sender: "bot" }]);
         setIsTyping(false);
-      }, 3000);
-    }, 1000);
+      }, 1200);
+    }, 600);
   };
 
   return (
     <>
       {personClick ? (
         <div className="w-full h-full flex flex-col bg-[#0d1418] rounded-lg">
-          <div className="px-4 pb-3 bg-[#202c33] text-white flex items-center gap-4 rounded-t-lg shadow-md">
-            <img
-              src={names.image}
-              alt={names.name}
-              className="w-13 h-13 rounded-full"
-            />
-            <span className="text-lg font-semibold flex flex-col">
-              {" "}
-              <span> {names.name}</span>
-              <span className="text-sm text-white/40">{`${names.name} ${names.name} ${names.name}`}</span>
-            </span>
-            <span className="ml-auto flex gap-3 items-center mr-4">
-              <span className="p-2">
-                <FaSearch className="    text-white/60  text-xl" />
-              </span>
-              <span
-                className={`relative transition-all flex items-center justify-center p-2 ${
-                  openBox ? "bg-[#293238] rounded-full   absolute" : ""
-                }`}
-              >
-                <svg
-                  onClick={() => setOpenBox(true)}
-                  onBlur={() => setOpenBox(false)}
-                  tabIndex={0}
-                  viewBox="0 0 24 24"
-                  height="27"
-                  width="27"
-                  preserveAspectRatio="xMidYMid meet"
-                  className="text-white/70"
-                  version="1.1"
-                  x="0px"
-                  y="0px"
-                >
-                  <title>menu</title>
-                  <path
-                    fill="currentColor"
-                    d="M12,7c1.104,0,2-0.896,2-2c0-1.105-0.895-2-2-2c-1.104,0-2,0.894-2,2 C10,6.105,10.895,7,12,7z M12,9c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,9.895,13.104,9,12,9z M12,15 c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,15.894,13.104,15,12,15z"
-                  ></path>
-                </svg>
-
-                {openBox && (
-                  <div className="bg-[#233138] z-100 grid grid-rows-10  py-3 h-110 w-60 rounded-md absolute top-12 right-0">
-                    <div className=" flex items-center text-white/70 px-4  hover:bg-[#1b252f]">
-                      Contact info
-                    </div>
-                    <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
-                      Select message
-                    </div>
-                    <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
-                      Mute notification
-                    </div>
-                    <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
-                      Disappearing messages
-                    </div>
-                    <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
-                      Add to favourites
-                    </div>
-                    <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
-                      Close chat
-                    </div>
-                    <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
-                      Report
-                    </div>
-                    <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
-                      Block
-                    </div>
-                    <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
-                      Clear chat
-                    </div>
-                    <div className=" flex items-center text-white/70 px-4 hover:bg-[#1b252f]">
-                      Delete chat
-                    </div>
-                  </div>
-                )}
-              </span>
-            </span>
-          </div>
-
-          <div className="flex-1 p-4 overflow-y-auto bg-[#0d1418] text-white">
+          <RightHeader /> 
+          <div className="flex-1 p-4 overflow-y-auto max-h-[calc(100vh-124px)] bg-[#0d1418] text-white">
             {messages.map((msg, index) => (
               <div
                 key={index}
