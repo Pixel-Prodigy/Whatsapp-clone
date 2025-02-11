@@ -9,7 +9,7 @@ import { Mobile } from "./components/layout/formobile/Mobile";
 
 const DesktopView = () => {
   return (
-    <div className="bg-black h-full py-2 grid max-w-[1440px] mx-auto grid-cols-[0.5fr_5.3fr_9fr]">
+    <div className=" h-full 2xl:py-2 grid max-w-[1485px] bg-[#262524] mx-auto grid-cols-[0.5fr_5.6fr_9fr]">
       <Header />
       <Left />
       <Right />
